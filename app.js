@@ -1,5 +1,3 @@
-import { response } from "express";
-
 export default (express, bodyParser, createReadStream, crypto, http) => {
     const app = express();
 
