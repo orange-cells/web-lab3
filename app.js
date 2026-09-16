@@ -33,7 +33,7 @@ export default (express, bodyParser, createReadStream, crypto, http) => {
         http.get(req.body.addr, (response) => response.pipe(res)).on('error', () => res.sendStatus(500));
     });
 
-    app.all('*', (req, res) => {
+    app.all(/.*/, (req, res) => {
         res.send('orangecells_1');
     });
 
